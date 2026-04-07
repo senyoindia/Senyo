@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Senyo Tab — The Notebook That Evolved</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="logo">SENYO</div>
+      <div class="nav-links">
+        <a href="#problems">Problems</a>
+        <a href="#features">Features</a>
+        <a href="#experience">Experience</a>
+      </div>
+      <div class="nav-cta">
+        <button class="btn-glass" onclick="openModal('interest')">I'm Interested</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge fade-up">✦ Reimagine How You Learn</div>
+      <h1 class="hero-title fade-up">Meet<br /><span class="gradient-text">Senyo Tab</span></h1>
+      <p class="hero-sub fade-up">The notebook that evolved.</p>
+      <div class="hero-lines fade-up">
+        <span>Carry less. Learn more.</span>
+        <span class="divider">·</span>
+        <span>No distractions. Just focus.</span>
+      </div>
+      <div class="hero-btns fade-up">
+        <button class="btn-primary" onclick="openModal('interest')">
+          <span>I'm Interested</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="btn-glass-outline" onclick="openModal('feedback')">Give Feedback</button>
+      </div>
+    </div>
+
+    <!-- 3D Tablet -->
+    <div class="tablet-scene" id="tabletScene">
+      <div class="tablet-wrapper" id="tabletWrapper">
+        <div class="tablet">
+          <div class="tablet-body">
+            <div class="tablet-screen">
+              <div class="screen-content">
+                <div class="screen-line"></div>
+                <div class="screen-line short"></div>
+                <div class="screen-line"></div>
+                <div class="screen-line medium"></div>
+                <div class="screen-line"></div>
+                <div class="screen-line short"></div>
+                <div class="screen-line medium"></div>
+                <div class="screen-line"></div>
+              </div>
+              <div class="screen-logo">SENYO</div>
+              <div class="screen-glow"></div>
+            </div>
+            <div class="tablet-home-btn"></div>
+            <div class="tablet-cam"></div>
+            <div class="tablet-edge-left"></div>
+            <div class="tablet-edge-right"></div>
+            <div class="tablet-edge-top"></div>
+            <div class="tablet-edge-bottom"></div>
+          </div>
+        </div>
+        <!-- Stylus -->
+        <div class="stylus">
+          <div class="stylus-body">
+            <div class="stylus-tip"></div>
+            <div class="stylus-band"></div>
+            <div class="stylus-clip"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint fade-up">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- PROBLEMS -->
+  <section class="problems" id="problems">
+    <div class="section-inner">
+      <div class="section-label fade-up">The Problem</div>
+      <h2 class="section-title fade-up">Students deserve<br /><em>better tools.</em></h2>
+      <div class="problems-grid">
+        <div class="problem-card fade-up" data-delay="0">
+          <div class="problem-icon">🎒</div>
+          <h3>Heavy Backpacks</h3>
+          <p>Students carry 5–7 kg of books daily, causing posture damage and fatigue before school even begins.</p>
+        </div>
+        <div class="problem-card fade-up" data-delay="100">
+          <div class="problem-icon">👁️</div>
+          <h3>Eye Strain</h3>
+          <p>Harsh LCD screens and poor lighting degrade eyesight over years of study sessions.</p>
+        </div>
+        <div class="problem-card fade-up" data-delay="200">
+          <div class="problem-icon">📱</div>
+          <h3>Distractions</h3>
+          <p>Smartphones and apps constantly pull focus away from learning, destroying deep study habits.</p>
+        </div>
+        <div class="problem-card fade-up" data-delay="300">
+          <div class="problem-icon">📚</div>
+          <h3>Too Many Books</h3>
+          <p>Managing dozens of notebooks, textbooks, and worksheets creates chaos instead of clarity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="solution" id="solution">
+    <div class="solution-inner">
+      <div class="solution-glow"></div>
+      <div class="section-label fade-up">The Answer</div>
+      <h2 class="solution-title fade-up">One device.<br /><span class="gradient-text">Zero distractions.</span></h2>
+      <p class="solution-desc fade-up">Senyo Tab replaces every notebook, textbook, and worksheet with a single focused device — designed to do one thing perfectly: help you learn.</p>
+      <div class="solution-tagline fade-up">"Feels like paper. Built for the future of learning."</div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="section-inner">
+      <div class="section-label fade-up">What It Does</div>
+      <h2 class="section-title fade-up">Engineered for<br /><em>deep focus.</em></h2>
+
+      <div class="features-grid">
+        <div class="feature-card fade-up" data-delay="0">
+          <div class="feature-num">01</div>
+          <div class="feature-icon">✏️</div>
+          <h3>Stylus Writing</h3>
+          <p>Real paper-like resistance. Write naturally with zero latency — the stylus responds exactly like pen on paper.</p>
+        </div>
+        <div class="feature-card fade-up" data-delay="80">
+          <div class="feature-num">02</div>
+          <div class="feature-icon">🌙</div>
+          <h3>Eye-Friendly Display</h3>
+          <p>E-ink inspired anti-glare screen with adaptive warmth. No eye strain. Study for hours comfortably.</p>
+        </div>
+        <div class="feature-card fade-up" data-delay="160">
+          <div class="feature-num">03</div>
+          <div class="feature-icon">⚡</div>
+          <h3>Featherlight</h3>
+          <p>At under 400g, Senyo Tab weighs less than a single textbook. Your back will thank you.</p>
+        </div>
+        <div class="feature-card fade-up" data-delay="240">
+          <div class="feature-num">04</div>
+          <div class="feature-icon">🔒</div>
+          <h3>One-App System</h3>
+          <p>No app store. No social media. No rabbit holes. Senyo runs exactly what learning needs — nothing more.</p>
+        </div>
+      </div>
+
+      <!-- Modes -->
+      <div class="modes-section fade-up">
+        <h3 class="modes-title">6 Intelligent Modes</h3>
+        <div class="modes-grid">
+          <div class="mode-pill">📖 Reading</div>
+          <div class="mode-pill">✍️ Writing</div>
+          <div class="mode-pill">📓 Notebook</div>
+          <div class="mode-pill">🧠 AI Analysis</div>
+          <div class="mode-pill">📝 Test Mode</div>
+          <div class="mode-pill">🎯 Focus Mode</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE / WRITING ANIMATION -->
+  <section class="experience" id="experience">
+    <div class="section-inner">
+      <div class="section-label fade-up">The Experience</div>
+      <h2 class="section-title fade-up">Watch it <em>write.</em></h2>
+      <p class="section-desc fade-up">The way Senyo Tab responds to your stylus isn't digital — it's intimate.</p>
+
+      <div class="writing-demo fade-up">
+        <div class="demo-paper">
+          <div class="demo-lines">
+            <div class="demo-line-bg"></div>
+            <div class="demo-line-bg"></div>
+            <div class="demo-line-bg"></div>
+            <div class="demo-line-bg"></div>
+            <div class="demo-line-bg"></div>
+          </div>
+          <svg class="writing-svg" id="writingSvg" viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
+            <path id="writingPath" d="M 40 60 C 55 40, 70 40, 80 60 C 90 80, 75 90, 65 80 M 95 45 L 95 85 M 95 50 C 105 42, 120 42, 125 55 C 130 68, 120 78, 108 78 C 100 78, 95 72, 95 65 M 140 45 L 140 85 M 140 62 C 148 50, 165 48, 170 62 L 170 85 M 185 62 C 192 48, 210 48, 215 62 L 215 85 M 185 62 C 185 55, 192 48, 200 48 M 230 48 C 220 48, 215 58, 215 68 C 215 78, 222 85, 232 85 C 242 85, 248 78, 248 68 C 248 58, 242 48, 232 48 M 270 45 L 263 85 M 263 63 C 270 50, 285 48, 290 62" stroke="url(#writeGrad)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="writeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#4f8fff"/>
+                <stop offset="100%" stop-color="#a855f7"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="stylus-cursor" id="stylusCursor">
+            <div class="sc-tip"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-glow"></div>
+      <h2 class="cta-title fade-up">Be part of what's<br /><span class="gradient-text">coming next.</span></h2>
+      <p class="cta-desc fade-up">Senyo Tab is in early development. Join our early interest list and help shape the future of learning in India.</p>
+      <div class="cta-btns fade-up">
+        <button class="btn-primary large" onclick="openModal('interest')">
+          <span>I'm Interested</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="btn-glass-outline large" onclick="openModal('feedback')">Give Feedback</button>
+      </div>
+      <div class="contact-line fade-up">
+        Reach us at <a href="mailto:senyoindia@gmail.com" class="email-link">senyoindia@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">SENYO</div>
+      <p class="footer-tag">Feels like paper. Built for the future of learning.</p>
+      <a href="mailto:senyoindia@gmail.com" class="footer-email">senyoindia@gmail.com</a>
+      <p class="footer-copy">© 2025 Senyo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL: Interest -->
+  <div class="modal-overlay" id="interestModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('interest')">✕</button>
+      <div class="modal-badge">Early Access</div>
+      <h2>I'm Interested</h2>
+      <p>Tell us about yourself and what you'd love in Senyo Tab.</p>
+      <div class="modal-form" id="interestForm">
+        <div class="form-group">
+          <label>Your Name <span class="optional">(optional)</span></label>
+          <input type="text" id="iName" placeholder="e.g. Rahul Sharma" />
+        </div>
+        <div class="form-group">
+          <label>Your Email <span class="required">*</span></label>
+          <input type="email" id="iEmail" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label>What would make Senyo Tab perfect for you?</label>
+          <textarea id="iMessage" rows="4" placeholder="Share your thoughts..."></textarea>
+        </div>
+        <button class="btn-primary full" onclick="submitInterest()">
+          <span>Send My Interest</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-success" id="interestSuccess">
+        <div class="success-icon">✦</div>
+        <h3>You're on the list!</h3>
+        <p>We'll reach out as Senyo Tab comes to life. Thank you!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Feedback -->
+  <div class="modal-overlay" id="feedbackModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('feedback')">✕</button>
+      <div class="modal-badge">Shape the Product</div>
+      <h2>Give Feedback</h2>
+      <p>Your feedback will directly influence how we build Senyo Tab.</p>
+      <div class="modal-form" id="feedbackForm">
+        <div class="form-group">
+          <label>Your Feedback <span class="required">*</span></label>
+          <textarea id="fMessage" rows="6" placeholder="What do you love, what's missing, what could be better?"></textarea>
+        </div>
+        <button class="btn-primary full" onclick="submitFeedback()">
+          <span>Submit Feedback</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-success" id="feedbackSuccess">
+        <div class="success-icon">✦</div>
+        <h3>Thank you!</h3>
+        <p>Your feedback has been received. It means a lot to us.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
