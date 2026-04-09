@@ -3,128 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senyo | Exploring the Future of Focus</title>
+    <title>Senyo Tab - Study Without Distractions</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="glow-bg"></div>
-    <div class="radial-top"></div>
+    <div class="landing-page">
+        <!-- Cursor glow that follows mouse -->
+        <div class="cursor-glow"></div>
 
-    <nav>
-        <div class="nav-container">
-            <div class="logo">SENYO</div>
-            <div class="nav-right">
-                <span>Research Phase</span>
-                <a href="#feedback" class="nav-cta">Share Feedback</a>
-            </div>
-        </div>
-    </nav>
+        <!-- Falling shapes container -->
+        <div class="falling-shapes-container" id="fallingShapesContainer"></div>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="reveal">
-                <span class="status-tag">Early Concept Exploration</span>
-                <h1>Study Without <span class="text-gradient">Distractions</span></h1>
-                <p>Carrying heavy bags, managing too many books, and constant distractions — we’re exploring a better way to study. We’d love your honest feedback.</p>
-                <div class="hero-actions">
-                    <a href="#feedback" class="btn-glow"> I'm Interested</a>
-                    <a href="#feedback" class="btn-ghost">💬 Share Feedback</a>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content reveal">
+                    <h1 class="hero-title">
+                        Study Without
+                        <span class="gradient-text"> Distractions</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Carrying heavy bags, managing too many books, and constant distractions — we're exploring a better way to study. We'd love your honest feedback.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary glow-btn" onclick="scrollToFeedback()">
+                            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+                            I'm Interested
+                        </button>
+                        <button class="btn btn-secondary" onclick="scrollToFeedback()">
+                            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                            Share Feedback
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="tablet-perspective">
-                <div class="tablet-glow"></div>
-                <div class="tablet-body" id="tablet">
-                    <div class="tablet-screen">
-                        <div class="ui-mockup">
-                            <div class="ui-line long"></div>
-                            <div class="ui-line short"></div>
-                            <div class="ui-circle"></div>
+
+                <div class="hero-visual reveal">
+                    <div class="tablet-3d" id="tablet3d">
+                        <div class="tablet-screen">
+                            <div class="tablet-content">
+                                <div class="screen-line"></div>
+                                <div class="screen-line"></div>
+                                <div class="screen-line"></div>
+                                <div class="screen-highlight"></div>
+                            </div>
                         </div>
+                        <div class="tablet-glow"></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="problems">
-        <div class="section-header reveal">
-            <h2>The Student Struggle</h2>
-            <p>Traditional learning tools haven't changed in decades. We identified four core issues.</p>
-        </div>
-        <div class="problem-grid">
-            <div class="glass-card reveal">
-                <div class="icon">🎒</div>
-                <h3>Heavy Backpacks</h3>
-                <p>Chronic back pain from 15kg of paper is a reality for most students.</p>
-            </div>
-            <div class="glass-card reveal">
-                <div class="icon">📚</div>
-                <h3>Too Many Books</h3>
-                <p>Managing physical textbooks, notebooks, and planners is a mental load.</p>
-            </div>
-            <div class="glass-card reveal">
-                <div class="icon">📵</div>
-                <h3>Distractions</h3>
-                <p>Modern tablets are built for entertainment, not for deep academic work.</p>
-            </div>
-            <div class="glass-card reveal">
-                <div class="icon">👁️</div>
-                <h3>Eye Strain</h3>
-                <p>Backlit LED screens cause fatigue during long library sessions.</p>
-            </div>
-        </div>
-    </section>
+        <!-- Problem Section -->
+        <section class="problem-section" data-parallax="slow">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">The Problems Students Face</h2>
+                    <p class="section-subtitle">
+                        We've talked to students and heard the same challenges over and over
+                    </p>
+                </div>
 
-    <section class="concept">
-        <div class="concept-panel reveal">
-            <div class="concept-text">
-                <h2>The Senyo Tab Idea</h2>
-                <div class="concept-list">
-                    <div class="concept-item">
-                        <strong>Unified Workspace</strong>
-                        <p>One slim device that houses every book and notebook you'll ever need.</p>
+                <div class="problem-grid">
+                    <div class="problem-card glass-card reveal card-3d">
+                        <div class="card-inner-3d">
+                            <div class="problem-icon-wrapper">
+                                <svg class="problem-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
+                            </div>
+                            <h3 class="problem-title">Heavy Backpacks</h3>
+                            <p class="problem-description">Carrying multiple textbooks and notebooks every day puts strain on your back and shoulders.</p>
+                        </div>
+                        <div class="card-glow"></div>
+                        <div class="card-shine"></div>
                     </div>
-                    <div class="concept-item">
-                        <strong>Paper-like Precision</strong>
-                        <p>Low-latency writing that feels exactly like a pen on physical paper.</p>
+
+                    <div class="problem-card glass-card reveal card-3d">
+                        <div class="card-inner-3d">
+                            <div class="problem-icon-wrapper">
+                                <svg class="problem-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                            </div>
+                            <h3 class="problem-title">Too Many Books</h3>
+                            <p class="problem-description">Managing different books for each subject makes studying disorganized and overwhelming.</p>
+                        </div>
+                        <div class="card-glow"></div>
+                        <div class="card-shine"></div>
                     </div>
-                    <div class="concept-item">
-                        <strong>Focus-First OS</strong>
-                        <p>A system that physically blocks social pings during study hours.</p>
+
+                    <div class="problem-card glass-card reveal card-3d">
+                        <div class="card-inner-3d">
+                            <div class="problem-icon-wrapper">
+                                <svg class="problem-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                            </div>
+                            <h3 class="problem-title">Distractions</h3>
+                            <p class="problem-description">Constant notifications and social media make it hard to focus on studying.</p>
+                        </div>
+                        <div class="card-glow"></div>
+                        <div class="card-shine"></div>
+                    </div>
+
+                    <div class="problem-card glass-card reveal card-3d">
+                        <div class="card-inner-3d">
+                            <div class="problem-icon-wrapper">
+                                <svg class="problem-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </div>
+                            <h3 class="problem-title">Eye Strain</h3>
+                            <p class="problem-description">Hours of screen time on bright displays cause fatigue and affect your vision.</p>
+                        </div>
+                        <div class="card-glow"></div>
+                        <div class="card-shine"></div>
                     </div>
                 </div>
             </div>
-            <div class="concept-visual">
-                <div class="floating-orb"></div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="solution-section" data-parallax="medium">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">
+                        What if there was a <span class="gradient-text">better way?</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        We're exploring a focused learning device built specifically for students
+                    </p>
+                </div>
+
+                <div class="solution-grid">
+                    <div class="solution-panel glass-panel reveal panel-3d">
+                        <div class="panel-inner-3d">
+                            <div class="solution-icon-container">
+                                <svg class="solution-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+                            </div>
+                            <h3 class="solution-title">One Device. Everything.</h3>
+                            <p class="solution-description">Replace all your notebooks and textbooks with a single, lightweight device designed specifically for studying.</p>
+                        </div>
+                        <div class="panel-glow"></div>
+                        <div class="panel-shine"></div>
+                    </div>
+
+                    <div class="solution-panel glass-panel reveal panel-3d">
+                        <div class="panel-inner-3d">
+                            <div class="solution-icon-container">
+                                <svg class="solution-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+                            </div>
+                            <h3 class="solution-title">Distraction-Free System</h3>
+                            <p class="solution-description">No social media, no notifications, no games. Just your study materials and learning tools.</p>
+                        </div>
+                        <div class="panel-glow"></div>
+                        <div class="panel-shine"></div>
+                    </div>
+
+                    <div class="solution-panel glass-panel reveal panel-3d">
+                        <div class="panel-inner-3d">
+                            <div class="solution-icon-container">
+                                <svg class="solution-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                            </div>
+                            <h3 class="solution-title">Paper-Like Writing</h3>
+                            <p class="solution-description">Natural writing experience that feels like real paper with a stylus designed for note-taking.</p>
+                        </div>
+                        <div class="panel-glow"></div>
+                        <div class="panel-shine"></div>
+                    </div>
+
+                    <div class="solution-panel glass-panel reveal panel-3d">
+                        <div class="panel-inner-3d">
+                            <div class="solution-icon-container">
+                                <svg class="solution-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                            </div>
+                            <h3 class="solution-title">Eye-Friendly Display</h3>
+                            <p class="solution-description">E-ink technology reduces eye strain, making it comfortable to read and study for hours.</p>
+                        </div>
+                        <div class="panel-glow"></div>
+                        <div class="panel-shine"></div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="feedback" class="feedback">
-        <div class="feedback-container reveal">
-            <h2>Would you actually use this?</h2>
-            <p>Be honest — your feedback helps us decide whether to build this. We're not selling, we're learning.</p>
-            
-            <form class="modern-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdcYaRnx1l2hWa2sHViyCCR_ig8J4ZyaXV9unH7R1G5y8JYYw/formResponse" method="POST">
-                <div class="input-wrapper">
-                    <input type="email" name="entry.1512485610" placeholder="Your email" required>
-                </div>
-                <div class="input-wrapper">
-                    <textarea name="entry.467346060" placeholder="Your thoughts (be honest — what would you change or add?)" required></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Send Feedback</button>
-            </form>
-        </div>
-    </section>
+        <!-- Feedback Section -->
+        <section id="feedback-section" class="feedback-section">
+            <div class="section-container">
+                <div class="feedback-content reveal">
+                    <div class="section-header">
+                        <h2 class="section-title">Would you actually use this?</h2>
+                        <p class="section-subtitle">
+                            Be honest — your feedback helps us decide whether to build this.
+                        </p>
+                    </div>
 
-    <footer>
-        <p>&copy; 2026 Senyo Research Lab. Built for focus.</p>
-    </footer>
+                    <div class="feedback-form-wrapper glass-panel">
+                        <form action="https://docs.google.com/forms/d/e/1FAIpQLSdcYaRnx1l2hWa2sHViyCCR_ig8J4ZyaXV9unH7R1G5y8JYYw/formResponse" method="POST" target="_blank" class="feedback-form" id="feedbackForm">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" id="email" name="entry.1512485610" placeholder="student@example.com" required class="form-input glass-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="feedback" class="form-label">Your Honest Thoughts</label>
+                                <textarea id="feedback" name="entry.467346060" placeholder="What would you change or add? Would you actually use this for studying?" rows="6" class="form-textarea glass-input"></textarea>
+                            </div>
+
+                            <button type="submit" class="form-submit glow-btn btn btn-primary">
+                                <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                                Send Feedback
+                            </button>
+                        </form>
+                        <div class="form-glow"></div>
+                    </div>
+
+                    <p class="feedback-note">
+                        Your feedback is anonymous and helps us understand if this is worth building. Thank you for being honest! 🙏
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Background glow effects -->
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+        <div class="glow-orb glow-orb-3"></div>
+
+        <!-- Floating 3D geometric shapes -->
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
